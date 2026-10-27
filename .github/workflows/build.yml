@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: Workflow
+name: Docker Build
 
 # Controls when the workflow will run
 on:
@@ -17,8 +17,8 @@ on:
   workflow_dispatch:
 
 jobs:
-  github-pipeline-library:
+  build-all:
     uses: laveracloudsolutions/github-pipeline-library/.github/workflows/build.yml@main
     with:
-      config-path: .github/images.json
+      config-path: .scripts/images.json
     secrets: inherit
